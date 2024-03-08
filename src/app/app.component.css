@@ -1,0 +1,12 @@
+h1{
+    color: red;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+}
+
+.menu{
+    margin-left: auto;
+    margin-right: auto;
+}

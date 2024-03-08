@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">{{title}}</h1>
+
+
+  <table style="margin-left: auto; margin-right: auto;">
+    <tr>
+      <th>Item</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Vegetarian</th>
+    </tr>
+    @for (m of MenuItems; track $index) {
+      <tr [class.strikethrough]="m.soldOut">
+        @if (m.soldOut) {
+        <td>{{m.name}} Sold Out</td>
+        }
+        @else {
+          <td>{{m.name}}</td>
+        }
+        <td>{{m.category}}</td>
+        <td>{{m.price}}</td>
+        <td>{{m.vegetarian}}</td>
+      <button>Add to Order</button>
+      </tr>
+    }
+  </table>
+
